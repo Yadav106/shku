@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>For Shku ❤️</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        overflow: auto;
+        background: linear-gradient(135deg, #ffd6e7, #e7d8ff);
+      }
+
+      /* Common Screen */
+
+      .screen {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        transition: 1s;
+      }
+
+      /* Loading */
+
+      #loading {
+        background: #111;
+        color: white;
+      }
+
+      .loader {
+        width: 250px;
+        height: 15px;
+        background: #333;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+
+      .progress {
+        width: 0%;
+        height: 100%;
+        background: #ff4f81;
+        border-radius: 20px;
+        animation: load 3s forwards;
+      }
+
+      @keyframes load {
+        to {
+          width: 100%;
+        }
+      }
+
+      h1 {
+        color: #ff477e;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.6;
+        color: #444;
+      }
+
+      /* Glass Card */
+
+      .card {
+        width: 90%;
+        max-width: 450px;
+        padding: 35px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      /* Buttons */
+
+      button {
+        border: none;
+        padding: 14px 30px;
+        border-radius: 30px;
+        margin: 15px;
+        cursor: pointer;
+        font-size: 16px;
+        background: #ff477e;
+        color: white;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hide screens */
+
+      .hidden {
+        display: none;
+      }
+
+      /* Hearts */
+
+      .heart {
+        position: absolute;
+        animation: float 5s linear infinite;
+      }
+
+      @keyframes float {
+        from {
+          transform: translateY(100vh);
+        }
+
+        to {
+          transform: translateY(-10vh);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+
+    <div id="loading" class="screen">
+      <h1 style="color: white">🌸 BestieOS v1.0 🌸</h1>
+
+      <p style="color: white">
+        Loading Happiness...<br />
+        Loading Memories...<br />
+        Loading Friendship...
+      </p>
+
+      <div class="loader">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+    <!-- Warning Screen -->
+
+    <div id="warning" class="screen hidden">
+      <div class="card">
+        <h1>⚠️ Warning</h1>
+
+        <p>
+          This website was specially created for one amazing person.<br /><br />
+
+          If your name isn't<br />
+
+          <b>❤️ Shreya ❤️</b>
+
+          <br /><br />
+
+          please close this website.
+        </p>
+
+        <button onclick="showQuestion()">Continue ❤️</button>
+      </div>
+    </div>
+
+    <!-- Question Screen -->
+
+    <div id="question" class="screen hidden">
+      <div class="card">
+        <h1>Shku ❤️</h1>
+
+        <p>Will you be my bestie forever? 💖</p>
+
+        <button onclick="yesClicked()">💖 Yes, Forever</button>
+
+        <button id="noBtn" onmouseover="moveNo()">🙈 No</button>
+      </div>
+    </div>
+    <!-- Acceptance Screen -->
+
+    <div id="accepted" class="screen hidden">
+      <div class="card">
+        <h1>🎉 Accepted! 🎉</h1>
+
+        <p>
+          Friendship Request Successfully Accepted ❤️
+          <br /><br />
+
+          Status:
+          <br />
+          <b>Besties Forever ♾️💖</b>
+        </p>
+
+        <button onclick="showLetter()">Read My Letter 💌</button>
+      </div>
+    </div>
+
+    <!-- Letter Screen -->
+
+    <div id="letter" class="hidden">
+      <div class="card">
+        <h1>💌 Dear Shku ❤️</h1>
+
+        <p id="letterText">
+          <!-- WRITE YOUR MESSAGE HERE -->
+
+          Hey Shku ❤️ I hope yaha tak pohochte pohochte tere face pe ek smile aa
+          gyi hogi 😊 You deserve it dude, coz you're the reason I smile in my
+          hard days. Waise I thought ki Friendship Day pe exactly at 12 am mai
+          teko WhatsApp pe text karunga, but then I thought... no, you deserve
+          some efforts dude 🤌 I know ki life has been hard in the recent days,
+          for both of us, but still mujhe hope hai yaar ki ek din sab thik ho
+          jayega and we'll enjoy this life to our fullest. Bas tu positive rehna
+          and of course mere saath rehna, coz I want you in my good days too 🫂
+          And yes, aaj hamara milne ka plan toh fulfil nahi ho paya, but I'll
+          still try to make it memorable for you in any way possible. So....
+          Happy Friendship Day dudeee ❤️🫂 I know I say it again and again, but
+          still I don't think it's enough to tell you that you're very special
+          to me. It's said that your friends are your only chosen family, and
+          I'm so lucky to choose you as my best friend. Mujhe nahi pata tha ki
+          jis ladki se mai 5th me ek misunderstanding ki wajah se milunga, vo
+          meri bestest friend ban jayegi 🥹 But yeah, God's been very kind to me
+          🧿 I just pray to God ki I never lose you 🤞 Baaki bolna toh aur bohot
+          kuch hai, but idk ye mera website itna load le payega ya nahi 😂
+          Isiliye baaki baatein jab ham milenge tab kahunga. So, take care dude
+          ❤️ And once again... Happy Friendship Day 🫂 Love you a lot ❤️
+        </p>
+
+        <button onclick="showMemories()">Continue ➜</button>
+      </div>
+    </div>
+
+    <!-- Memories Screen -->
+
+    <div id="memories" class="screen hidden">
+      <div class="card">
+        <h1>📸 Our Memories ❤️</h1>
+
+        <p>Some moments become memories that we cherish forever.</p>
+
+        <br />
+
+        <div class="photos">
+          <img
+            src="photo1.jpg"
+            style="width: 100%; border-radius: 20px; margin-bottom: 15px"
+          />
+
+          <img
+            src="photo2.jpg"
+            style="width: 100%; border-radius: 20px; margin-bottom: 15px"
+          />
+
+          <img src="photo3.jpg" style="width: 100%; border-radius: 20px" />
+        </div>
+
+        <p style="margin-top: 20px">
+          Thank you for all the smiles, the talks, and the memories. ❤️ Forever
+          grateful for you, Shku ❤️
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Switch Screens
+
+      function changeScreen(oldScreen, newScreen) {
+        document.getElementById(oldScreen).classList.add("hidden");
+
+        document.getElementById(newScreen).classList.remove("hidden");
+      }
+
+      // After Loading
+
+      setTimeout(() => {
+        changeScreen("loading", "warning");
+      }, 3500);
+
+      // Continue button
+
+      function showQuestion() {
+        changeScreen("warning", "question");
+      }
+
+      // Yes button
+
+      function yesClicked() {
+        changeScreen("question", "accepted");
+
+        createHearts();
+      }
+
+      // Letter
+
+      function showLetter() {
+        changeScreen("accepted", "letter");
+      }
+
+      // Memories
+
+      function showMemories() {
+        changeScreen("letter", "memories");
+      }
+
+      // Moving No Button
+
+      function moveNo() {
+        let btn = document.getElementById("noBtn");
+
+        let x = Math.random() * 300 - 150;
+        let y = Math.random() * 200 - 100;
+
+        btn.style.transform = `translate(${x}px,${y}px)`;
+      }
+
+      // Heart Animation
+
+      function createHearts() {
+        for (let i = 0; i < 40; i++) {
+          let heart = document.createElement("div");
+
+          heart.className = "heart";
+
+          heart.innerHTML = "❤️";
+
+          heart.style.left = Math.random() * 100 + "vw";
+
+          heart.style.fontSize = 15 + Math.random() * 30 + "px";
+
+          heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 6000);
+        }
+      }
+    </script>
+  </body>
+</html>
